@@ -1,0 +1,132 @@
+@import "assets.css";
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #f9f9f9 url(../assets/images/background.png) repeat;
+    text-align: center;
+}
+h1{
+    font-family: dungeon, serif;
+    font-size: 60px;
+    margin: 5px auto;
+}
+input{
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+}
+input:focus{
+    border-bottom: 1px solid var(--site-red);
+    outline: none;
+}
+#navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background: black;
+}
+#navBarLogoBarImage{
+    width: 45px;
+    margin: 5px 10px 5px 5px;
+}
+.navBarLink{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: auto 15px;
+    font-family: openSans, sans-serif;
+    background: none;
+    border: none;
+}
+#homePageTitle{
+    color: var(--site-red);
+}
+.characterAddLinkBoxInput{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#addCharacterLink{
+    font-size: 16px;
+    cursor: pointer;
+}
+#addCharacterLinkHelp{
+    font-size: 20px;
+    cursor: pointer;
+}
+#charterLinkBottomBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#charterLinkBottomBox > *{
+    margin: 5px 10px;
+}
+.characterLinkBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.characterLinkCloseIcon{
+    cursor: pointer;
+}
+
+/*drop down menu*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: openSans, sans-serif;
+}
+#dropDownBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 225px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 25px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.rowColumn{
+   margin: auto 15px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px auto;
+}
+
+/*over ride tingle.js css rules*/
+.tingle-modal__close:focus{
+    outline: none;
+}
+.modalTextAlignLeft{
+    text-align: left;
+}

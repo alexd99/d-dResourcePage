@@ -1,0 +1,11 @@
+:root{
+    --site-red: #ED1C22
+}
+@font-face {
+    font-family: openSans;
+    src: url("../assets/fonts/openSans.ttf");
+}
+@font-face {
+    font-family: dungeon;
+    src: url("../assets/fonts/dungeon.ttf");
+}

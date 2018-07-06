@@ -5,7 +5,11 @@
     <title>D&D Resource Page</title>
     <link rel="icon" href="assets/images/logo.png">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/tingle.js/tingle.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div id="navBar">
@@ -17,6 +21,39 @@
         <div id="navBarLinksBar">
             <a class="navBarLink" href="index.html">HOME</a>
             <a class="navBarLink" href="dice.html">DICE</a>
+            <div class="dropdown">
+                <div id="dropDownBox">
+                    <button class="navBarLink">YOUR CHARACTERS</button>
+                    <div class="dropdown-content">
+                        <div id="characterAddLinkBox">
+                            <div class="rowColumn">
+
+                                <div class="row">
+                                    <label for="charterLinkName">Name:</label>
+                                    <input type="text" id="charterLinkName">
+                                </div>
+
+                                <div class="row">
+                                    <label for="charterLinkURL">URL:</label>
+                                    <input type="text" id="charterLinkURL">
+                                </div>
+
+                                <div id="charterLinkBottomBox">
+                                    <button id="addCharacterLink" onclick="addCharacterLink();">ADD</button>
+                                    <i class="far fa-question-circle" id="addCharacterLinkHelp" onclick="openCharacterLinkHelp();"></i>
+                                </div>
+
+                                <div id="characterLinksBox">
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="characterLinks">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -25,5 +62,9 @@
         <p>This is a website that has gathered many different DND resources in one location.</p>
 
     </div>
+
+<script src="assets/tingle.js/tingle.js"></script>
+<script src="js/modals.js"></script>
+<script src="js/addCharacterLink.js"></script>
 </body>
 </html>
