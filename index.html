@@ -19,12 +19,12 @@
             </a>
         </div>
         <div id="navBarLinksBar">
-            <a class="navBarLink" href="index.html">HOME</a>
+            <a class="navBarLink" href="index.html" id="activeNavBarLink">HOME</a>
             <a class="navBarLink" href="dice.html">DICE</a>
             <div class="dropdown">
                 <div id="dropDownBox">
-                    <button class="navBarLink">YOUR CHARACTERS</button>
-                    <div class="dropdown-content">
+                    <a class="navBarLink" id="yourCharactersLink">YOUR CHARACTERS</a>
+                    <div class="dropdown-content" onmouseenter="onLinkHover(true);" onmouseleave="onLinkHover(false);">
                         <div id="characterAddLinkBox">
                             <div class="rowColumn">
 

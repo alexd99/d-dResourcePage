@@ -86,3 +86,16 @@ function deleteCharacter(id){
     }
 
 }
+
+// tells if the charter box is shown an colors the link the right color
+function onLinkHover(enter) {
+    switch (enter) {
+        case true:
+            document.getElementById('yourCharactersLink').classList.add('characterLinkHover');
+            break;
+        case false:
+           document.getElementById('yourCharactersLink').classList.add('navBarLink');
+           document.getElementById('yourCharactersLink').classList.remove('characterLinkHover');
+            break;
+    }
+}
