@@ -1,5 +1,5 @@
 # dndResourcePage
-## A D&D resource page
+## A Dungeons & Dragons resource page
 
 This is a website that has gathered serval different D&D related websites and tools in one location for the player's convince.
 
