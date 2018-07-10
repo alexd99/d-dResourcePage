@@ -5,6 +5,11 @@
     <title>D&D Resource Page - Dice</title>
     <link rel="icon" href="assets/images/logo.png">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/toastr/toastr.min.css">
+    <link rel="stylesheet" href="assets/tingle.js/tingle.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -17,12 +22,215 @@
         </div>
         <div id="navBarLinksBar">
             <a class="navBarLink" href="index.html">HOME</a>
-            <a class="navBarLink" href="dice.html">DICE</a>
+            <a class="navBarLink" href="dice.html" id="activeNavBarLink">DICE</a>
+            <div class="dropdown">
+                <div id="dropDownBox">
+                    <a class="navBarLink" id="yourCharactersLink">YOUR CHARACTERS</a>
+                    <div class="dropdown-content" onmouseenter="onLinkHover(true);" onmouseleave="onLinkHover(false);">
+                        <div id="characterAddLinkBox">
+                            <div class="rowColumn">
+
+                                <div class="row">
+                                    <label for="charterLinkName">Name:</label>
+                                    <input type="text" id="charterLinkName">
+                                </div>
+
+                                <div class="row">
+                                    <label for="charterLinkURL">URL:</label>
+                                    <input type="text" id="charterLinkURL">
+                                </div>
+
+                                <div id="charterLinkBottomBox">
+                                    <button id="addCharacterLink" onclick="addCharacterLink();">ADD</button>
+                                    <i class="far fa-question-circle" id="addCharacterLinkHelp" onclick="openCharacterLinkHelp();"></i>
+                                </div>
+
+                                <div id="characterLinksBox">
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="characterLinks">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <h1>Dice Bag</h1>
+    <h1 id="homePageTitle">Dice Bag</h1>
     <p>This is your personal D&D dice bag</p>
 
+    <div id="diceTableContainer">
+        <table id="diceTable">
+            <thead>
+               <tr>
+                   <th>Die</th>
+                   <th>Number</th>
+                   <th><pre>+  -</pre></th>
+                   <th>Modifier</th>
+                   <th></th>
+                   <th>Result</th>
+               </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    D4
+                </td>
+                <td>
+                    <input type="number" id="d4Number" class="diceInput" title="d4Number" value="1" min="1">
+                </td>
+                <td>
+                    <input type="radio" id="d4ModifierPositive" name="d4+-Modifier" title="d4+-Modifier" value="+" checked>
+                    <input type="radio" id="d4ModifierNegative" name="d4+-Modifier" title="d4+-Modifier" value="-">
+                </td>
+                <td>
+                    <input type="number" id="d4ModifierNumber" class="diceInput" title="d4Number" value="0">
+                </td>
+                <td>
+                    <button class="diceTableRollButton" onclick="rollDice('d4')">Roll</button>
+                </td>
+                <td id="d4Result">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    D6
+                </td>
+                <td>
+                    <input type="number" id="d6Number" class="diceInput" title="d6Number" value="1" min="1">
+                </td>
+                <td>
+                    <input type="radio" id="d6ModifierPositive" name="d6+-Modifier" title="d6+-Modifier" value="+" checked>
+                    <input type="radio" id="d6ModifierNegative" name="d6+-Modifier" title="d6+-Modifier" value="-">
+                </td>
+                <td>
+                    <input type="number" id="d6ModifierNumber" class="diceInput" title="d6Number" value="0">
+                </td>
+                <td>
+                    <button class="diceTableRollButton" onclick="rollDice('d6')">Roll</button>
+                </td>
+                <td id="d6Result">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    D8
+                </td>
+                <td>
+                    <input type="number" id="d8Number" class="diceInput" title="d8Number" value="1" min="1">
+                </td>
+                <td>
+                    <input type="radio" id="d8ModifierPositive" name="d8+-Modifier" title="d8+-Modifier" value="+" checked>
+                    <input type="radio" id="d8ModifierNegative" name="d8+-Modifier" title="d8+-Modifier" value="-">
+                </td>
+                <td>
+                    <input type="number" id="d8ModifierNumber" class="diceInput" title="d8Number" value="0">
+                </td>
+                <td>
+                    <button class="diceTableRollButton" onclick="rollDice('d8')">Roll</button>
+                </td>
+                <td id="d8Result">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   D10
+                </td>
+                <td>
+                    <input type="number" id="d10Number" class="diceInput" title="d10Number" value="1" min="1">
+                </td>
+                <td>
+                    <input type="radio" id="d10ModifierPositive" name="d10+-Modifier" title="d10+-Modifier" value="+" checked>
+                    <input type="radio" id="d10ModifierNegative" name="d10+-Modifier" title="d10+-Modifier" value="-">
+                </td>
+                <td>
+                    <input type="number" id="d10ModifierNumber" class="diceInput" title="d10Number" value="0">
+                </td>
+                <td>
+                    <button class="diceTableRollButton" onclick="rollDice('d10')">Roll</button>
+                </td>
+                <td id="d10Result">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    D12
+                </td>
+                <td>
+                    <input type="number" id="d12Number" class="diceInput" title="d12Number" value="1" min="1">
+                </td>
+                <td>
+                    <input type="radio" id="d12ModifierPositive" name="d12+-Modifier" title="d12+-Modifier" value="+" checked>
+                    <input type="radio" id="d12ModifierNegative" name="d12+-Modifier" title="d12+-Modifier" value="-">
+                </td>
+                <td>
+                    <input type="number" id="d12ModifierNumber" class="diceInput" title="d12Number" value="0">
+                </td>
+                <td>
+                    <button class="diceTableRollButton" onclick="rollDice('d12')">Roll</button>
+                </td>
+                <td id="d12Result">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    D100
+                </td>
+                <td>
+                    <input type="number" id="d100Number" class="diceInput" title="d100Number" value="1" min="1">
+                </td>
+                <td>
+                    <input type="radio" id="d100ModifierPositive" name="d100+-Modifier" title="d100+-Modifier" value="+" checked>
+                    <input type="radio" id="d100ModifierNegative" name="d100+-Modifier" title="d100+-Modifier" value="-">
+                </td>
+                <td>
+                    <input type="number" id="d100ModifierNumber" class="diceInput" title="d100Number" value="0">
+                </td>
+                <td>
+                    <button class="diceTableRollButton" onclick="rollDice('d100')">Roll</button>
+                </td>
+                <td id="d100Result">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    D20
+                </td>
+                <td>
+                    <input type="number" id="d20Number" class="diceInput" title="d20Number" value="1" min="1">
+                </td>
+                <td>
+                    <input type="radio" id="d20ModifierPositive" name="d20+-Modifier" title="d20+-Modifier" value="+" checked>
+                    <input type="radio" id="d20ModifierNegative" name="d20+-Modifier" title="d20+-Modifier" value="-">
+                </td>
+                <td>
+                    <input type="number" id="d20ModifierNumber" class="diceInput" title="d20Number" value="0">
+                </td>
+                <td>
+                    <button class="diceTableRollButton" onclick="rollDice('d20')">Roll</button>
+                </td>
+                <td id="d20Result">
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="assets/jquery-3.2.1.min.js"></script>
+<script src="assets/tingle.js/tingle.js"></script>
+<script src="assets/toastr/toastr.min.js"></script>
+<script src="js/modals.js"></script>
+<script src="js/addCharacterLink.js"></script>
+<script src="js/diceRoller.js"></script>
 </body>
 </html>

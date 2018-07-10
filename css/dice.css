@@ -6,6 +6,40 @@
 #diceTable tr th,td{
     padding: 0 20px;
 }
+#diceTable tr td:first-child{
+    border-left: 1px solid black;
+}
+#diceTable tr th:first-child{
+    border-left: 1px solid black;
+}
+#diceTable tr td:last-child{
+    border-right: 1px solid black;
+}
+#diceTable tr th:last-child{
+    border-right: 1px solid black;
+}
+#diceTable tbody tr > *{
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+#diceTable thead tr > *{
+    font-size: 17px;
+}
 #diceTable{
     margin: auto;
+    background: transparent;
+    font-size: 15px;
+}
+.diceInput{
+    width: 25px;
+    font-size: 15px;
+    text-align: center;
+}
+.diceTableRollButton{
+     border-radius: 5px;
+     font-family: openSans, sans-serif;
+     cursor: pointer;
+}
+.diceTableRollButton:focus{
+    outline: none;
 }

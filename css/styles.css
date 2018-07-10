@@ -25,6 +25,11 @@ input:focus{
     border-bottom: 1px solid var(--site-red);
     outline: none;
 }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 /*nav bar*/
 #navBar{
