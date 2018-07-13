@@ -26,7 +26,6 @@
     font-size: 17px;
 }
 #diceTable{
-    margin: auto;
     background: transparent;
     font-size: 15px;
 }
@@ -42,4 +41,51 @@
 }
 .diceTableRollButton:focus{
     outline: none;
+}
+#diceHistory{
+    width: 524px;
+    border: 1px solid black;
+    height: calc(100vh - 220px);
+    overflow-x: scroll;
+}
+#diceHistory > h3{
+    margin-top: 2px;
+}
+#diceHistoryResults{
+    text-align: left;
+    padding-left: 4px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.diceHistoryHeader{
+    margin: 5px auto;
+}
+#diceContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+#diceHistoryTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid #9A9A9A;
+}
+#diceHistoryTitleLeft, #diceHistoryTitleRight{
+    width: 25%;
+}
+#diceHistoryTitleMiddle{
+    width: 50%;
+}
+#diceHistoryTitleRight > .fa-history{
+    cursor: pointer;
+    font-size: 20px;
+}
+.diceHistoryBoxEl{
+    text-align: center;
+}
+.diceHistoryBoxEl span{
+    margin: auto 4px;
 }

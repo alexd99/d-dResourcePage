@@ -9,31 +9,55 @@ function rollDice(dieName) {
 
         let count = 1;
         let result = 0;
+        let diceHistoryBoxEl = document.createElement('div');
+        diceHistoryBoxEl.classList.add('diceHistoryBoxEl');
+        diceHistoryBoxEl.innerHTML += `<h4 class="diceHistoryHeader">${numberOfDice} ${dieName}</h4> <br>`;
         while (count <= numberOfDice) {
-            console.log(count);
-
+            let rolledPositiveNumber = 0;
+            let rolledNegativeNumber = 0;
             switch (modifierType) {
                 case '+':
-                    let rollResultPlus = (Math.floor((Math.random() * numberOfSides) + 1)) + Number(modifierNumber);
+                    rolledPositiveNumber = (Math.floor((Math.random() * numberOfSides) + 1));
+                    let rollResultPlus = rolledPositiveNumber + Number(modifierNumber);
                     if (rollResultPlus < 1) {
                         rollResultPlus = 1;
                     }
                     result += rollResultPlus;
+                    diceHistoryBoxEl.innerHTML += `<span><b>${count}.</b> ${rolledPositiveNumber} 
+                                                    + ${modifierNumber} = ${rollResultPlus}</span>`;
                     break;
                 case '-':
-                    let rollResultMinus = (Math.floor((Math.random() * numberOfSides) + 1)) - Number(modifierNumber);
+                    rolledNegativeNumber = (Math.floor((Math.random() * numberOfSides) + 1));
+                    let rollResultMinus = rolledNegativeNumber - Number(modifierNumber);
                     if (rollResultMinus < 1) {
                         rollResultMinus = 1;
                     }
                     result += rollResultMinus;
+                    diceHistoryBoxEl.innerHTML += `<span><b>${count}.</b> ${rolledNegativeNumber} 
+                                                    - ${modifierNumber} = ${rollResultMinus}</span>`;
                     break;
             }
-            count++;
+            if(dieName === 'd20'){
+                if(rolledPositiveNumber === 20 || rolledNegativeNumber === 20){
+                    toastr.success('You rolled a natural 20');
+                }
+                else if (rolledPositiveNumber === 1 || rolledNegativeNumber === 1) {
+                    toastr.error('You rolled a natural 1');
+                }
+            }
+            count++
 
         }
+        diceHistoryBoxEl.innerHTML += `<hr>`;
         document.querySelector(`#${dieName}Result`).innerHTML = String(result);
+        document.querySelector(`#diceHistoryResults`).appendChild(diceHistoryBoxEl);
     }
     else {
         toastr.info("Please select a number between 1 and 100");
     }
+}
+
+function clearDiceHistory() {
+    let test = document.querySelector(`#diceHistoryResults`);
+    document.querySelector(`#diceHistoryResults`).innerHTML = '';
 }
