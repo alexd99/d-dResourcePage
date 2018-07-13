@@ -1,3 +1,22 @@
 #homePageTitle{
     color: var(--site-red);
 }
+#externalLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 5px 5px;
+}
+.externalLinksBox{
+    border: 1px solid black;
+    background: transparent;
+    margin: 5px 15px;
+    width: 300px;
+    height: 165px;
+    padding: 0 5px;
+}
+.externalLinksBoxHead, .externalLinksBoxDescription{
+    font-family: openSans, sans-serif;
+}

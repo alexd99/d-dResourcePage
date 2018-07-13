@@ -30,7 +30,10 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
+a{
+    text-decoration: none;
+    color: var(--site-red);
+}
 /*nav bar*/
 #navBar{
     display: flex;
