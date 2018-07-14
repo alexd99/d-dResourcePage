@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>D&D Resource Page</title>
+    <title>D&D Resource Page - Classes</title>
     <link rel="icon" href="assets/images/logo.png">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
@@ -19,9 +19,9 @@
             </a>
         </div>
         <div id="navBarLinksBar">
-            <a class="navBarLink" href="index.html" id="activeNavBarLink">HOME</a>
+            <a class="navBarLink" href="index.html">HOME</a>
             <a class="navBarLink" href="dice.html">DICE</a>
-            <a class="navBarLink" href="classes.html">CLASSES</a>
+            <a class="navBarLink" href="classes.html" id="activeNavBarLink">CLASSES</a>
             <div class="dropdown">
                 <div id="dropDownBox">
                     <a class="navBarLink" id="yourCharactersLink">YOUR CHARACTERS</a>
@@ -58,44 +58,17 @@
         </div>
     </div>
 
-    <div>
-        <h1 id="homePageTitle">Welcome to the D&D Resource Page</h1>
-        <p>This is a website that has gathered many different DND resources in one location.</p>
+    <h1 id="homePageTitle">D&D Classes</h1>
+    <p>This page has all of the current 5e classes</p>
 
-        <h2>Helpful Resources</h2>
+    <div id="dndClassesBox">
 
-        <div id="externalLinks">
-            <div class="externalLinksBox">
-                <h3 class="externalLinksBoxHead">D&D Beyond</h3>
-                <p class="externalLinksBoxDescription">A great website for digital d&d books, characters building, and more. </p>
-                <a  class="externalLinksBoxLink" href="https://www.dndbeyond.com/" target="_blank">GO</a>
-            </div>
-            <div class="externalLinksBox">
-                <h3 class="externalLinksBoxHead">Demographics Generator</h3>
-                <p class="externalLinksBoxDescription">Generates the demographics for your kingdom and towns</p>
-                <a  class="externalLinksBoxLink" href="http://www.d20srd.org/fantasy/demographics/" target="_blank">GO</a>
-            </div>
-            <div class="externalLinksBox">
-                <h3 class="externalLinksBoxHead">Dungeon Generator</h3>
-                <p class="externalLinksBoxDescription">Generates a random and custom dungeon map</p>
-                <a  class="externalLinksBoxLink" href="http://www.d20srd.org/fantasy/dungeon/" target="_blank">GO</a>
-            </div>
-            <div class="externalLinksBox">
-                <h3 class="externalLinksBoxHead">Map Generator</h3>
-                <p class="externalLinksBoxDescription">A fantasy world generator. Perfect for a generating a world for
-                    your next campaign.</p>
-                <a  class="externalLinksBoxLink" href="http://www.d20srd.org/fantasy/world/" target="_blank">GO</a>
-            </div>
-            <div class="externalLinksBox">
-                <h3 class="externalLinksBoxHead">Town Generator</h3>
-                <p class="externalLinksBoxDescription">A simple town map generator, that is customizable.</p>
-                <a  class="externalLinksBoxLink" href="https://watabou.itch.io/medieval-fantasy-city-generator" target="_blank">GO</a>
-            </div>
-        </div>
     </div>
 
 <script src="assets/tingle.js/tingle.js"></script>
 <script src="js/modals.js"></script>
 <script src="js/addCharacterLink.js"></script>
+<script type="module" src="./js/classes.js"></script>
+    http://localhost:63342/d&dResourcePage/js/classes.js
 </body>
 </html>
