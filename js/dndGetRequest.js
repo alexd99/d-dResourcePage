@@ -1,4 +1,4 @@
-function dndGetRequest (endPoint){
+export function dndGetRequest (endPoint){
 
     const request = new Request(`http://www.dnd5eapi.co/api/${endPoint}`);
 
