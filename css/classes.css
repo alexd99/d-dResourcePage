@@ -10,9 +10,54 @@
   border: 1px solid black;
   width: 500px;
   height: 445px;
-  padding: 5px
+  padding: 5px;
+  cursor: pointer;
 }
 .dndClassImage{
   margin: auto;
   height: 200px;
+}
+#classCard{
+  width: 40%;
+  margin: auto;
+  background: #efefef;
+}
+.dndClassTitleBox{
+  background: #c7c7c7;
+  margin: auto;
+}
+.dndClassTitleBoxTop{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.dndClassTitleBox .dndClassTitleBoxTop div{
+  width: 33.33%
+}
+.subclassTitle{
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+.className{
+  margin: 10px auto;
+}
+.dndClassTitleBoxTop i{
+  cursor: pointer;
+}
+.classCardBody{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.classCardBodyLeft{
+  width: 70%;
+  border-right: 1px solid black;
+}
+.classCardBodyRight{
+  width: 30%;
+}
+.classCardBodyLeft, .classCardBodyRight{
+  height: 100%
 }
