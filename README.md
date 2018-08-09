@@ -5,4 +5,5 @@ This is a website that has gathered serval different D&D related websites and to
 
 [Click](https://alexd99.github.io/dndResourcePage/) here to view the website
 
-###important in order for some pages to work, like the classes page, you need to alow your browser to load unsafe scripts, I am using an api call form [dnd5eapi](http://www.dnd5eapi.com), which is a insecure site. 
+### Important 
+in order for some pages to work, like the classes page, you need to alow your browser to load unsafe scripts, I am using an api call form [dnd5eapi](http://www.dnd5eapi.com), which is a insecure site. 
