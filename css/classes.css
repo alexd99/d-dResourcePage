@@ -18,7 +18,7 @@
   height: 200px;
 }
 #classCard{
-  width: 40%;
+  width: 55%;
   margin: auto;
   background: #efefef;
 }
@@ -38,6 +38,7 @@
 .subclassTitle{
   margin: 0 auto;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 .className{
   margin: 10px auto;
@@ -56,8 +57,19 @@
   border-right: 1px solid black;
 }
 .classCardBodyRight{
-  width: 30%;
+  width: 25%;
 }
 .classCardBodyLeft, .classCardBodyRight{
   height: 100%
+}
+.closeClassBox{
+  font-size: 25px;
+}
+.classCardBodyLeft, .classCardBodyRight {
+  font-size: 17px;
+  padding: 0px 10px;
+  text-align: left;
+}
+.modalParagraph{
+  text-indent: 50px;
 }
