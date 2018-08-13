@@ -1,5 +1,5 @@
 import {dndGetRequest} from "./dndGetRequest.js"
-import {classDescriptions} from "./classDescriptions.js"
+import {classDescriptions} from "./descriptions/classDescriptions.js"
 
 dndGetRequest('classes/', false)
 .then((dndClasses)=>{
