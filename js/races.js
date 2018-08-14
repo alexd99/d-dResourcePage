@@ -3,13 +3,14 @@ import {raceDescriptions} from './descriptions/raceDescriptions.js'
 
 dndGetRequest('races/', false)
 .then((races)=>{
+  document.getElementById('dndRaceBox').style.display = 'none'
   console.log(races);
   races.results.forEach((race, index)=>{
     let raceDiv = document.createElement('div');
-    raceDiv.classList.add('raceDiv');
+    raceDiv.classList.add('dndImageCard');
     raceDiv.innerHTML = `<h3>${race.name}</h3><img src="./assets/images/dndRaces/${race.name}.png" class="raceImage"><p>${raceDescriptions[index].description}</p>`;
     raceDiv.addEventListener('click', showRace(race.url));
-    document.getElementById('dndRacesBox').appendChild(raceDiv);
+    document.getElementById('dndImageCardBox').appendChild(raceDiv);
   })
 });
 
@@ -17,6 +18,10 @@ function showRace(url) {
   return () => {
     dndGetRequest(url, true)
     .then((race) => {
+      document.getElementById('dndRaceBox').style.display = 'none'
+      let raceBox = document.getElementById('dndRacesBox');
+      raceBox.style.display = 'block'
+      raceBox.innerHTML = `<h1>Test</h1>`
       console.log(race);
     });
   }

@@ -6,10 +6,10 @@ dndGetRequest('classes/', false)
   document.getElementById('dndClassBox').style.display = 'none'
   dndClasses.results.forEach((dndClass, index)=>{
     let classDiv = document.createElement('div');
-    classDiv.classList.add('classDiv');
+    classDiv.classList.add('dndImageCard');
     classDiv.innerHTML = `<h3>${dndClass.name}</h3><img src="./assets/images/dndClasses/${dndClass.name}.png" class="dndClassImage"><p>${classDescriptions[index].description}</p>`;
     classDiv.addEventListener('click', showClass(dndClass.url));
-    document.getElementById('dndClassesBox').appendChild(classDiv);
+    document.getElementById('dndImageCardBox').appendChild(classDiv);
   })
 });
 
@@ -87,23 +87,23 @@ function showClass(url) {
         })
 
         dndClassBox.innerHTML = `
-          <div id="classCard">
-            <div class="dndClassTitleBox">
-              <div class="dndClassTitleBoxTop">
+          <div id="dndCard">
+            <div class="dndCardTitle">
+              <div class="dndCardTop">
                 <div></div>
-                <div id="classTitleBoxText">
+                <div id="dndCardTitle">
                   <h2 class="className">${dndClass.name}</h2>
                 </div>
-                <div><i class="fas fa-times closeClassBox" onclick="document.getElementById('dndClassesBox').style.display = 'flex';document.getElementById('dndClassBox').style.display = 'none';"></i></div>
+                <div><i class="fas fa-times dndCloseCard" onclick="document.getElementById('dndClassesBox').style.display = 'flex';document.getElementById('dndClassBox').style.display = 'none';"></i></div>
               </div>
             </div>
-            <div class="classCardBody">
-              <div class="classCardBodyLeft">
+            <div class="dndCardBody">
+              <div class="dndCardBodyLeft">
                 <p><b>Proficiencies:</b> ${proficiencies}</p>
                 <p>${proficiencyChoices}</p>
                 <p><b>Starting Equipment:</b> ${startingEquipment}</p>
               </div>
-              <div class="classCardBodyRight">
+              <div class="dndCardBodyRight">
                 <p><b>Hit Die:</b> D${dndClass.hit_die}</p>
                 <p>${spellCasting}</p>
                 <p><b>Saving Throws:</b> ${savingThrows}</p>
@@ -117,7 +117,7 @@ function showClass(url) {
         subclassEl.addEventListener('click', showSubclass(dndClass.subclasses[0].url));
         subclassEl.innerHTML = `Subclass: ${dndClass.subclasses[0].name}`;
 
-        document.getElementById('classTitleBoxText').appendChild(subclassEl);
+        document.getElementById('dndCardTitle').appendChild(subclassEl);
       });
     });
   }
