@@ -18,8 +18,8 @@ function showRace(url) {
   return () => {
     dndGetRequest(url, true)
     .then((race) => {
-      document.getElementById('dndRaceBox').style.display = 'none'
-      let raceBox = document.getElementById('dndRacesBox');
+      document.getElementById('dndImageCardBox').style.display = 'none'
+      let raceBox = document.getElementById('dndRaceBox');
       raceBox.style.display = 'block'
       raceBox.innerHTML = `<h1>Test</h1>`
       console.log(race);

@@ -21,7 +21,7 @@ function showClass(url) {
       .then((equipment) => {
 
         let dndClassBox = document.getElementById('dndClassBox');
-        document.getElementById('dndClassesBox').style.display = 'none';
+        document.getElementById('dndImageCardBox').style.display = 'none';
         dndClassBox.style.display = 'block';
 
         let spellCasting = '';
@@ -94,7 +94,7 @@ function showClass(url) {
                 <div id="dndCardTitle">
                   <h2 class="className">${dndClass.name}</h2>
                 </div>
-                <div><i class="fas fa-times dndCloseCard" onclick="document.getElementById('dndClassesBox').style.display = 'flex';document.getElementById('dndClassBox').style.display = 'none';"></i></div>
+                <div><i class="fas fa-times dndCloseCard" onclick="document.getElementById('dndImageCardBox').style.display = 'flex';document.getElementById('dndClassBox').style.display = 'none';"></i></div>
               </div>
             </div>
             <div class="dndCardBody">

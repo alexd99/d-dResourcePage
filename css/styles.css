@@ -3,8 +3,6 @@
 @import "assets.css";
 @import "index.css";
 @import "dice.css";
-@import "classes.css";
-@import "races.css";
 
 html, body{
     padding: 0;
