@@ -1,0 +1,66 @@
+/* dnd card */
+#dndCard{
+  width: 55%;
+  margin: auto;
+  background: #efefef;
+}
+.dndCardTitle{
+  background: #c7c7c7;
+  margin: auto;
+}
+.dndCardTop{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.dndCardTitle .dndCardTop div{
+  width: 33.33%
+}
+.dndCloseCard{
+  cursor: pointer;
+  font-size: 25px;
+}
+.dndCardBody{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.dndCardBodyLeft{
+  width: 70%;
+  border-right: 1px solid black;
+}
+.dndCardBodyRight{
+  width: 25%;
+}
+.dndCardBodyLeft, .dndCardBodyRight{
+  height: 100%;
+  font-size: 17px;
+  padding: 0px 10px;
+  text-align: left;
+}
+
+/* dnd image card */
+#dndImageCardBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.dndImageCard{
+  margin: 5px 10px;
+  border: 1px solid black;
+  width: 500px;
+  height: 445px;
+  padding: 5px;
+  cursor: pointer;
+}
+.dndImageCard > p {
+  text-align: left;
+}
+.dndImageCard > img{
+  margin: auto;
+  height: 200px;
+}
