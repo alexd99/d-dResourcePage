@@ -35,6 +35,10 @@ a{
     text-decoration: none;
     color: var(--site-red);
 }
+.pointer{
+  cursor: pointer;
+}
+
 /*nav bar*/
 #navBar{
     display: flex;
