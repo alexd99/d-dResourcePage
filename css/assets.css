@@ -9,3 +9,7 @@
     font-family: dungeon;
     src: url("../assets/fonts/dungeon.ttf");
 }
+@font-face {
+    font-family: riseOfKingdom;
+    src: url("../assets/fonts/riseOfKingdom.ttf");
+}

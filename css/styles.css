@@ -3,6 +3,7 @@
 @import "assets.css";
 @import "index.css";
 @import "dice.css";
+@import "demographics.css";
 
 html, body{
     padding: 0;
@@ -17,12 +18,12 @@ h1{
     font-size: 60px;
     margin: 5px auto;
 }
-input{
+.characterInput{
     border: none;
     border-bottom: 1px solid black;
     background: transparent;
 }
-input:focus{
+.characterInput:focus{
     border-bottom: 1px solid var(--site-red);
     outline: none;
 }
