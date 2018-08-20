@@ -1,22 +1,27 @@
-#kingdomTitle{
+#kingdomTitle, #settlementTitle{
   font-family: riseOfKingdom, sans-serif;
-  font-size: 30px;
+  font-size: 28px;
 }
 #kingdomOptions{
-  margin: auto;
   width: 555px;
 }
-#kingdomOptions td,tr{
+#settlementOptions{
+  width: 350px;
+}
+.optionsTable{
+  margin: auto;
+}
+.optionsTable td,tr{
   border: none;
   padding: 5px 1px;
   width: 200px;
   font-size: 16px;
 }
-#kingdomOptions .alignRight {
+.optionsTable .alignRight {
   text-align: right;
   padding-right: 5px;
 }
-#kingdomOptions .alignLeft {
+.optionsTable .alignLeft {
   text-align: left;
   padding-left: 5px;
 }
@@ -40,11 +45,24 @@
 .demographicOption:focus{
   outline: none;
 }
-#kingdomStats{
+#kingdomStats, .townStats{
   text-align: left;
-  width: 60%;
+  width: 95%;
   margin: auto;
 }
 #kingdomStats span{
   padding-left: 10px;
+}
+#shopElContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+}
+#shopElContainer > p{
+  margin: 5px 10px;
+}
+#townSize, #specialOcupations{
+  margin-left: 10px;
 }

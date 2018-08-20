@@ -64,15 +64,15 @@
 
   <h1 id="homePageTitle">Demograhics Calculator</h1>
 
-  <h2 id="kingdomTitle">The Kingdom of Illazan</h2>
+  <h2 id="kingdomTitle">The Kingdom of <span id="kingdomNameText">Illazan<span></h2>
 
-  <table id="kingdomOptions">
+  <table id="kingdomOptions" class="optionsTable">
     <tr>
       <td class="alignRight">
         <label for="kingdomName">Kingdom Name</label>
       </td>
       <td>
-        <input class="demographicOption" type="text" id="kingdomName" value="Illazan">
+        <input class="demographicOption" type="text" id="kingdomName" value="Illazan" onfocusout="updateKingdomName(); calculateTheKingdom();">
       </td>
       <td></td>
     </tr>
@@ -81,7 +81,7 @@
         <label for="kingdomPhysicalArea">Physical Area</label>
       </td>
       <td>
-        <input class="demographicOption " type="number" min="1" id="kingdomPhysicalArea" value="100000">
+        <input class="demographicOption " type="number" min="1" id="kingdomPhysicalArea" value="91000" onfocusout="calculateTheKingdom();">
       </td>
       <td class="alignLeft">
         sq. miles
@@ -92,34 +92,75 @@
         <label for="kingdomPopulationDensity">Population Density</label>
       </td>
       <td>
-        <select class="demographicOption" min="1" id="kingdomPopulationDensity">
-          <option value="Desolate">Desolate</option>
-          <option value="Low">Low</option>
-          <option value="Settled">Settled</option>
-          <option value="Average" selected>Average</option>
-          <option value="High">High</option>
-          <option value="Maximum">Maximum</option>
+        <select class="demographicOption" min="1" id="kingdomPopulationDensity" onchange="changeDensityText(); calculateTheKingdom();">
+          <option value="20">Desolate</option>
+          <option value="40">Low</option>
+          <option value="60">Settled</option>
+          <option value="80">Average</option>
+          <option value="100" selected>High</option>
+          <option value="120">Maximum</option>
         </select>
       </td>
-      <td class="alignLeft">
+      <td class="alignLeft" id="populationAmountText">
         (80 persons per sq. mile)
+      </td>
+    </tr>
+    <tr>
+      <td class="alignRight">
+        <label for="kingdomAge">Kingdom Age</label>
+      </td>
+      <td>
+        <input class="demographicOption " type="number" min="1" id="kingdomAge" value="1000" onfocusout="calculateTheKingdom();">
+      </td>
+      <td class="alignLeft">
+        years
       </td>
     </tr>
   </table>
 
   <div id="kingdomStats">
-    <p><b>Physical Area:</b> <span id="kingdomStatsPhysicalArea">The Empire of Egiorlon covers an area of 105 thousand square miles. Of this, 74% (77 thousand sq. miles) is arable land, and 25% (27 thousand sq. miles) is wilderness.</span></p>
-    <p><b>Population:</b> <span id="kingdomStatsPopulation">The Empire of Egiorlon covers an area of 105 thousand square miles. Of this, 74% (77 thousand sq. miles) is arable land, and 25% (27 thousand sq. miles) is wilderness.</span></p>
-    <p><b>Settlements:</b> <span id="kingdomStatsSettlements">The Empire of Egiorlon covers an area of 105 thousand square miles. Of this, 74% (77 thousand sq. miles) is arable land, and 25% (27 thousand sq. miles) is wilderness.</span></p>
-    <p><b>Castles:</b> <span id="kingdomStatsCastles">The Empire of Egiorlon covers an area of 105 thousand square miles. Of this, 74% (77 thousand sq. miles) is arable land, and 25% (27 thousand sq. miles) is wilderness.</span></p>
+    <p><b>Physical Area:</b> <span id="kingdomStatsPhysicalArea"></span></p>
+    <p><b>Population:</b> <span id="kingdomStatsPopulation"></span></p>
+    <p><b>Settlements:</b> <span id="kingdomStatsSettlements"></span></p>
+    <p><b>Castles:</b> <span id="kingdomStatsCastles"></span></p>
   </div>
 
+  <h2 id="settlementTitle">The Settlement of <span id="settlementNameText">Bullmar<span></h2>
 
+  <table id="settlementOptions" class="optionsTable">
+    <tr>
+      <td class="alignRight">
+        <label for="settlementName">Settlement Name</label>
+      </td>
+      <td>
+        <input class="demographicOption" type="text" id="settlementName" value="Bullmar" onfocusout="updatesettlementName(); calculateTheSettlement();">
+      </td>
+    </tr>
+    <tr>
+      <td class="alignRight">
+        <label for="settlementsPopulation">Settlement's Population</label>
+      </td>
+      <td>
+        <input class="demographicOption " type="number" min="1" id="settlementsPopulation" value="8000" onfocusout="calculateTheSettlement();">
+      </td>
+    </tr>
+  </table>
+
+  <div class="townStats">
+    <p id="townSize"></p>
+    <div id="shopElContainer">
+
+    </div>
+    <p id="specialOcupations"></p>
+  </div>
+
+  <h4>This calculator was made with the help from <a href="http://www222.pair.com/sjohn/blueroom/demog.htm" target="_blank">Medieval Demographics Made Easy</a></h4>
 
 <script src="assets/jquery-3.2.1.min.js"></script>
 <script src="assets/tingle.js/tingle.js"></script>
 <script src="assets/toastr/toastr.min.js"></script>
 <script src="js/modals.js"></script>
 <script src="js/addCharacterLink.js"></script>
+<script src="js/demograhicsCalculator.js"></script>
 </body>
 </html>
