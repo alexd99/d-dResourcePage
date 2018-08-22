@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>D&D Resource Page - Dice</title>
     <link rel="icon" href="assets/images/logo.png">
 
@@ -26,40 +28,17 @@
           <a class="navBarLink" href="demographics.html">DEMOGRAPHICS CALCULATOR</a>
           <a class="navBarLink" href="classes.html">CLASSES</a>
           <a class="navBarLink" href="races.html">RACES</a>
-          <div class="dropdown">
-              <div id="dropDownBox">
-                  <a class="navBarLink" id="yourCharactersLink">YOUR CHARACTERS</a>
-                  <div class="dropdown-content" onmouseenter="onLinkHover(true);" onmouseleave="onLinkHover(false);">
-                      <div id="characterAddLinkBox">
-                          <div class="rowColumn">
-
-                              <div class="row">
-                                  <label for="charterLinkName">Name:</label>
-                                  <input class="characterInput" type="text" id="charterLinkName">
-                              </div>
-
-                              <div class="row">
-                                  <label for="charterLinkURL">URL:</label>
-                                  <input class="characterInput" type="text" id="charterLinkURL">
-                              </div>
-
-                              <div id="charterLinkBottomBox">
-                                  <button id="addCharacterLink" onclick="addCharacterLink();">ADD</button>
-                                  <i class="far fa-question-circle" id="addCharacterLinkHelp" onclick="openCharacterLinkHelp();"></i>
-                              </div>
-
-                              <div id="characterLinksBox">
-
-                              </div>
-
-                          </div>
-                      </div>
-                      <div id="characterLinks">
-                      </div>
-                  </div>
-              </div>
-          </div>
       </div>
+      <div id="moblieNavBar">
+        <i class="fas fa-bars" id="moblieNavBarIcon" onclick="showLinks();"></i>
+      </div>
+  </div>
+  <div id="moblieNavBarLinks">
+    <a class="navBarLink" href="index.html">HOME</a>
+    <a class="navBarLink" href="dice.html" id="activeNavBarLink">DICE</a>
+    <a class="navBarLink" href="demographics.html">DEMOGRAPHICS CALCULATOR</a>
+    <a class="navBarLink" href="classes.html">CLASSES</a>
+    <a class="navBarLink" href="races.html">RACES</a>
   </div>
 
   <h1 id="homePageTitle">Dice Bag</h1>
@@ -242,7 +221,7 @@
 <script src="assets/jquery-3.2.1.min.js"></script>
 <script src="assets/tingle.js/tingle.js"></script>
 <script src="assets/toastr/toastr.min.js"></script>
-<script src="js/modals.js"></script>
+<script src="js/mobileNavbar.js"></script>
 <script src="js/addCharacterLink.js"></script>
 <script src="js/diceRoller.js"></script>
 </body>
