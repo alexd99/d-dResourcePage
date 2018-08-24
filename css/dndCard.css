@@ -64,3 +64,17 @@
   margin: auto;
   height: 200px;
 }
+
+@media only screen and (max-width: 1282px) {
+  #dndCard{
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 397px) {
+  #dndCard{
+    width: 95%;
+  }
+  .dndImageCard{
+    height: auto;
+  }
+}

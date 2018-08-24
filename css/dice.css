@@ -89,3 +89,28 @@
 .diceHistoryBoxEl span{
     margin: auto 4px;
 }
+
+@media only screen and (max-width: 1070px)  {
+  #diceContainer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  #diceTableContainer {
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 528px)  {
+  #diceTable tr th, td {
+    padding: 0 5px;
+  }
+  #diceHistory{
+    width: 95%;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 348px)  {
+  #diceTable tr th, td {
+    padding: 0 1px;
+  }
+}

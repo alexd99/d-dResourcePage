@@ -66,3 +66,9 @@
 #townSize, #specialOcupations{
   margin-left: 10px;
 }
+
+@media only screen and (max-width: 1000px) {
+  #kingdomOptions{
+    width: auto;
+  }
+}
