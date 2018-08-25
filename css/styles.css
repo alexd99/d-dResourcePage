@@ -4,6 +4,7 @@
 @import "index.css";
 @import "dice.css";
 @import "demographics.css";
+@import "spells.css";
 
 html, body{
     padding: 0;
