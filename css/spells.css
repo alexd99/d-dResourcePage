@@ -1,0 +1,29 @@
+#spellList{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#spellList > p{
+  font-size: 16px;
+  font-family: openSans, sans-serif;
+  margin: 5px 10px;
+  cursor: pointer;
+}
+.spellModalTitle {
+  text-align: center;
+}
+#searchBar:focus{
+  outline: none;
+  border-bottom: 1px solid var(--site-red)
+}
+#searchBar{
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 16px;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+#spellList{
+  padding: 0 10px;
+}

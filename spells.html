@@ -43,9 +43,34 @@
 
   <h1 id="homePageTitle">D&D Spells</h1>
 
+  <input type="text" onkeyup="searchForSpell();" id="searchBar" placeholder="search">
+  <div id="spellList"></div>
+
 <script src="assets/tingle.js/tingle.js"></script>
 <script src="js/modals.js"></script>
 <script src="js/mobileNavbar.js"></script>
-<script src="js/spells.js"></script>
+<script type="module" src="js/spells.js"></script>
+<script>
+function searchForSpell() {
+    let input, filter, listContainer, listElements, a, i;
+
+    input = document.getElementById("searchBar");
+    filter = input.value.toUpperCase();
+    listContainer = document.getElementById("spellList");
+    listElements = listContainer.getElementsByClassName("spellEl");
+
+    for (i = 0; i < listElements.length; i++) {
+        let check = listElements[i].innerHTML.toUpperCase();
+        if(check.indexOf(filter) > -1){
+            listElements[i].style.display = 'inline';
+            document.getElementById("spellList").style.justifyContent = "space-between";
+        }
+        else {
+            listElements[i].style.display = 'none';
+            document.getElementById("spellList").style.justifyContent = "center";
+        }
+    }
+}
+</script>
 </body>
 </html>
