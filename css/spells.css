@@ -52,3 +52,9 @@
 .spellDescription{
   text-indent: 20px;
 }
+.spellEl:hover{
+  background: rgb(216, 216, 216);
+}
+.spellEl{
+  padding: 5px;
+}
