@@ -25,6 +25,12 @@ function showSpell(spell) {
   return () => {
     dndGetRequest(spell.school.url, true)
       .then((school) => {
+
+        let spellDescriptions = ''
+        spell.desc.forEach((spellDesc) => {
+          spellDescriptions += `<p>${spellDesc.replace('â€�', '').replace('â€�', '').replace('â€œ', '').replace('â€œ', '').replace('â€™', '')}</p>`;
+        });
+
         let atHigherLevel = '';
         if (spell.higher_level) {
           atHigherLevel = `<p><b>At Higher Level:</b> ${spell.higher_level}</p>`;
@@ -39,6 +45,11 @@ function showSpell(spell) {
         spell.classes.forEach((dndClass) => {
           spellClasses += `<p>${dndClass.name}</p>`
         });
+
+        let schoolDescription = '';
+        if (school) {
+          schoolDescription += `${school.desc}`
+        }
 
         const spellModal = new tingle.modal({
           footer: true,
@@ -56,7 +67,9 @@ function showSpell(spell) {
         });
         spellModal.setContent(`
       <h2 class="spellModalTitle">${spell.name}</h2>
-      <p>${spell.desc[0]}</p>
+      <div class="spellDescription">
+        ${spellDescriptions}
+      </div>
       ${atHigherLevel}
       
       <h3 class="spellModalTitle sectionHeader">Spell Info</h3>
@@ -71,7 +84,8 @@ function showSpell(spell) {
       </div>
 
       <h3 class="spellModalTitle sectionHeader">School: ${spell.school.name}</h3>
-      <p>${school.desc}</p>
+      <p>${schoolDescription}</p>
+     
 
       <h3 class="spellModalTitle sectionHeader">Classes That Can Use This Spell</h3>
       <div id="spellClasses">
