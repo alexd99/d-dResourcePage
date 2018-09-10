@@ -27,3 +27,25 @@
 #spellList{
   padding: 0 10px;
 }
+#spellInfo, #spellClasses{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#spellInfo p, #spellClasses p {
+  margin: 5px;
+}
+.schoolLink{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.schoolLink:hover{
+  text-decoration: underline;
+  color: var(--site-red);
+  cursor: pointer;
+}
+.sectionHeader{
+  margin-top: 40px;
+}
