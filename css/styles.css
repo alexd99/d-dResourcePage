@@ -100,7 +100,7 @@ and modal css rules*/
   margin-bottom: 7px;
 }
 
-@media only screen and (max-width: 701px)  {
+@media only screen and (max-width: 796px)  {
   #moblieNavBar {
     display: block;
   }
