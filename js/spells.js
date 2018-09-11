@@ -28,7 +28,7 @@ function showSpell(spell) {
 
         let spellDescriptions = ''
         spell.desc.forEach((spellDesc) => {
-          spellDescriptions += `<p>${spellDesc.replace('â€�', '').replace('â€�', '').replace('â€œ', '').replace('â€œ', '').replace('â€™', '')}</p>`;
+          spellDescriptions += `<p>${spellDesc.replace(/[^a-zA-Z0-9]+/g, " ")}</p>`;
         });
 
         let atHigherLevel = '';
